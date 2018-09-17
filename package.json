@@ -13,5 +13,20 @@
     "calculator"
   ],
   "author": "Anand Vardhan",
-  "license": "ISC"
+  "license": "ISC",
+  "cordova": {
+    "id": "cordova-plugin-mathcalculator",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anandvardhan1991/MathNativeCalculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anandvardhan1991/MathNativeCalculator/issues"
+  },
+  "homepage": "https://github.com/anandvardhan1991/MathNativeCalculator#readme"
 }
