@@ -6,6 +6,7 @@ import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import cordova.plugin.mathcalculator.AddAssistant;
 
 /**
  * This class echoes a string called from JavaScript.
@@ -44,7 +45,7 @@ public class MathCalculator extends CordovaPlugin {
             try{
                 int param1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
                 int param2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
-                callbackContext.success("" + (param1+param2) );
+                callbackContext.success("" + new AddAssistant(param1,param2).addAssistantMethod());
             }catch(Exception e){
                 callbackContext.error("Something went wrong"+ e);
             }
