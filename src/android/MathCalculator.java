@@ -70,7 +70,7 @@ public class MathCalculator extends CordovaPlugin {
 
 
     private String calc_sub(int param1, int param2){
-        if(param1 > 0 && param2 > 0 ){
+        if(param1 >= 0 && param2 >= 0 ){
             return (String.valueOf(param1 - param2));
         } else return param1 < 0 ? "1st not great than 0" : "2nd not great than 0";
     }
