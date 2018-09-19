@@ -59,12 +59,19 @@ public class MathCalculator extends CordovaPlugin {
             try{
                 int param1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
                 int param2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
-                callbackContext.success("" + (param1-param2) );
+                callbackContext.success(calc_sub(param1, param2));
             }catch(Exception e){
                 callbackContext.error("Something went wrong"+ e);
             }
         } else {
             callbackContext.error("Please do not pass null value");
         }
+    }
+
+
+    private String calc_sub(int param1, int param2){
+        if(param1 > 0 && param2 > 0 ){
+            return (String.valueOf(param1 - param2));
+        } else return param1 < 0 ? "1st not great than 0" : "2nd not great than 0";
     }
 }
