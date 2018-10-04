@@ -12,4 +12,8 @@ var subtract = (arg0, success, error) => {
     exec(success, error, 'MathCalculator', 'subtract', [arg0]);
 };
 
-module.exports = { add , subtract };
+var openActivity = (arg0, success, error) => {
+    exec(success, error, 'MathCalculator', 'openActivity', [arg0]);
+}
+
+module.exports = { add , subtract, openActivity };

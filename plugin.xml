@@ -14,9 +14,18 @@
                 <param name="android-package" value="cordova.plugin.mathcalculator.MathCalculator" />
             </feature>
         </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:label="My New Activity" android:name="cordova.plugin.mathcalculator.NewActivity"></activity>
+        </config-file>
         <config-file parent="/*" target="AndroidManifest.xml" />
-        <source-file src="src/android/MathCalculator.java" target-dir="src/cordova/plugin/mathcalculator/MathCalculator" />
-        <source-file src="src/android/AddAssistant.java" target-dir="src/cordova/plugin/mathcalculator/MathCalculator"/>
+        <source-file src="src/android/MathCalculator.java" target-dir="src/cordova/plugin/mathcalculator" />
+        <source-file src="src/android/AddAssistant.java" target-dir="src/cordova/plugin/mathcalculator"/>
+        <source-file src="src/android/NewActivity.java" target-dir="src/cordova/plugin/mathcalculator"/>
+        <source-file src="src/android/FetchR.java" target-dir="src/cordova/plugin/mathcalculator"/>
+        <source-file src="src/android/res/main_layout.xml" target-dir="res/layout"/>
+        <!-- <framework src="src/android/mathcalc.gradle" custom="true" type="gradleReference" /> -->
+        <lib-file src="src/android/libs/sample_java_lib.jar"/>
+        <!-- <framework src="src/android/libs/sample_java_lib.jar" custom="true"/> -->
     </platform>
     
     <!--IOS-->
